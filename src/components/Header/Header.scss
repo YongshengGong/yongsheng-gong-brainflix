@@ -5,6 +5,10 @@
     padding:1rem;
     &__logo-title-container{
         width:100%;
+        padding:1rem;
+        background-image: url("../../assets/logo/BrainFlix-logo.svg");
+        background-repeat: no-repeat;
+        background-position: center;
     }
     &__search-avatar-container{
       @include flex(row,center,center);
@@ -24,6 +28,13 @@
         background-size: cover;
         background-position: -0.3rem;
         border-radius:50% ;
-        
+    }
+    &__upload-button{
+        width:100%;
+        padding:1rem;
+        background-image: url("../../assets/icons/upload.svg");
+        background-repeat: no-repeat;
+        background-position: 5% center;
+        border-radius: 4px;
     }
 }
