@@ -9,7 +9,7 @@
         width:7.4rem;
         height:1.5rem;
         margin:0 auto;
-        background-image: url("../../assets/logo/BrainFlix-logo.svg");
+        background-image: url("../../assets/images/logo/BrainFlix-logo.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-color: #FFFFFF;
@@ -24,7 +24,7 @@
         width:90%;
         min-width:15rem;
         height:2.5rem;
-        background-image: url("../../assets/icons/search.svg");
+        background-image: url("../../assets/images/icons/search.svg");
         background-repeat: no-repeat;
         background-position: 5% center;
         border-radius: 4px;
@@ -42,6 +42,7 @@
             font-family: avenir;
             font-style: normal;
             font-weight: 400;
+            color:$primary-text-color;
         }
     }
     &__avatar{
@@ -57,7 +58,7 @@
         width:100%;
         height:2.5rem;
         border:0;
-        background-image: url("../../assets/icons/upload.svg");
+        background-image: url("../../assets/images/icons/upload.svg");
         background-repeat: no-repeat;
         background-position: 4% center;
         background-size: $mobile-labels-buttons-font-size;
