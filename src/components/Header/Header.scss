@@ -1,7 +1,12 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets";
 .header{
     width:100%;
     &__logo-title-container{
         width:100%;
+    }
+    &__search-avatar-container{
+      @include flex(row,center,center);
     }
     &__search{
         width:100%;
