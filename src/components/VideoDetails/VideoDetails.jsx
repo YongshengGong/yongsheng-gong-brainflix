@@ -1,6 +1,7 @@
 import React from "react";
 import "./VideoDetails.scss";
 import SubSection from "./SubSection/SubSection";
+import CommentsInput from "./CommentsInput/CommentsInput";
 function VideoDetails({video}) {
     return (
         <section className="video-details">
@@ -12,14 +13,7 @@ function VideoDetails({video}) {
              </p>
              <section className="video-details__comments">
                  <h3 className="video-details__comments-title">{video.comments.length} {video.comments.length===1?("Comment"):("Comments")}</h3>
-                 <section className="video-details__comments-input">
-                    <span className="video-details__comments-input-avatar"></span>
-                    <form className="video-details__comments-input-form">
-                        <label className="video-details__comments-input-form-title">JOIN THE CONVERSATION</label>
-                        <textarea className="video-details__comments-input-form-field"></textarea>
-                        <button className="video-details__comments-input-form-button">COMMENT</button>
-                    </form>
-                 </section>
+                 <CommentsInput video={video}/>
                  <section className="video-details__comments-display">
                      {
                         video.comments.map(
