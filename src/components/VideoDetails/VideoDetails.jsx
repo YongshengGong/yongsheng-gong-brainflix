@@ -1,17 +1,12 @@
 import React from "react";
 import "./VideoDetails.scss";
+import SubSection from "./SubSection/SubSection";
 function VideoDetails({video}) {
     return (
         <section className="video-details">
              <video className="video-details__play" poster={video.image} controls></video>
              <h1 className="video-details__title">{video.title}</h1>
-             <section className="video-details__subSection">
-                <span className="video-details__subSection-channel">{video.channel}</span>
-                <span className="video-details__subSection-views">{video.views}</span>
-                <span className="video-details__subSection-time">{video.timestamp}</span>
-                <span className="video-details__subSection-likes">{video.timestamp}</span>
-                <span  >{video.likes}</span>
-             </section>
+             <SubSection video={video}/>
              <p className="video-details__description">
                 {video.description}
              </p>
