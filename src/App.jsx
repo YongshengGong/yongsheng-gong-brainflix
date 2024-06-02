@@ -3,6 +3,7 @@ import './App.scss'
 import Header from "./components/Header/Header";
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import videos from "./data/video-details.json";
+import NextVideos from './components/NextVideos/NextVideos';
 function App() {
      const [selectedVideo,setSelectedVideo]=useState(videos[0]);
   return (
@@ -10,6 +11,7 @@ function App() {
        <Header/>
        <main>
          <VideoDetails video={selectedVideo}/>
+         <NextVideos/>
        </main>
     </>
   )
