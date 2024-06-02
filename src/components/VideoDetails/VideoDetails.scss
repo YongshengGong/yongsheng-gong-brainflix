@@ -31,5 +31,16 @@
             color: $primary-text-color;
             margin-bottom: 1rem;
         }
+        &-comments{
+            &-title{
+                font-family: avenir;
+                font-size: $mobile-subheader-body-font-size;
+                line-height: $mobile-subheader-body-line-height;
+                color: $primary-text-color;
+                font-weight:600;
+                margin-bottom:1rem;
+            }
+        }
     }
+    
 }

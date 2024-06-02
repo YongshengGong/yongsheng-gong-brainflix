@@ -1,0 +1,83 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/topography";
+
+.video-details__container-comments-input {
+    width: 100%;
+    @include flex(row, space-between, flex-start);
+
+    &-avatar {
+        background-image: url("../../../assets/images/Mohan-muruge.jpg");
+        width: 2.2rem;
+        height: 2.2rem;
+        background-size: cover;
+        background-position: -0.3rem;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+        position:relative;
+        top:1.5rem;
+    }
+
+    &-form {
+        @include flex(column, center, flex-start);
+        width: 85%;
+
+        &-title{
+            font-family: avenir;
+            font-size: $mobile-section-header-font-size;
+            line-height: $mobile-section-header-line-height;
+            color: $secondary-text-color;
+            font-weight:600;
+            margin-bottom:4px;
+        }
+
+        &-field {
+            width: 100%;
+            min-width: 15rem;
+            height: 6rem;
+            border-radius: 4px;
+            padding: 0.75rem;
+            border: $form-default-filled-border solid $form-default-filled-color;
+            background-color: $form-background-color;
+            margin-bottom:1rem;
+
+            &:focus {
+                outline: none;
+                border: $form-active-border solid $form-active-color;
+            }
+
+            &::placeholder {
+                font-size: $mobile-subheader-body-font-size;
+                line-height: $mobile-subheader-body-line-height;
+                font-family: avenir;
+                font-style: normal;
+                font-weight: 400;
+                color: $primary-text-color;
+            }
+        }
+
+        &-button {
+            width: 100%;
+            height: 2.5rem;
+            border: 0;
+            background-image: url("../../../assets/images/icons/add_comment.svg");
+            background-repeat: no-repeat;
+            background-position: 4% center;
+            background-size: $mobile-labels-buttons-font-size;
+            border-radius: 4px;
+            font-size: $mobile-labels-buttons-font-size;
+            line-height: $mobile-labels-buttons-line-height;
+            font-family: avenir;
+            font-style: normal;
+            font-weight: 600;
+            background-color: $button-default-color;
+            color: #FFFFFF;
+            margin-bottom:1rem;
+
+
+            &:hover {
+                background-color: $button-hover-color;
+            }
+        }
+    }
+}
