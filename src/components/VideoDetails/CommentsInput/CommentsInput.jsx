@@ -4,8 +4,10 @@ function CommentsInput() {
         <section className="video-details__container-comments-input">
             <span className="video-details__container-comments-input-avatar"></span>
             <form className="video-details__container-comments-input-form">
-                <label className="video-details__container-comments-input-form-title">JOIN THE CONVERSATION</label>
-                <textarea className="video-details__container-comments-input-form-field" placeholder="Add a new comment"></textarea>
+                <section className="video-details__container-comments-input-form-container">
+                    <label className="video-details__container-comments-input-form-container-title">JOIN THE CONVERSATION</label>
+                    <textarea className="video-details__container-comments-input-form-container-field" placeholder="Add a new comment"></textarea>
+                </section>
                 <button className="video-details__container-comments-input-form-button">COMMENT</button>
             </form>
         </section>
