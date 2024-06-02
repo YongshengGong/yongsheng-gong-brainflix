@@ -11,8 +11,9 @@
     }
 
     &__container {
-        padding-left:1rem;
-        padding-right:1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
         &-title {
             width: 100%;
             margin-bottom: 1rem;
@@ -21,6 +22,14 @@
             line-height: $mobile-page-header-line-height;
             font-weight: 700;
             color: $primary-text-color;
+        }
+
+        &-description {
+            font-family: avenir;
+            font-size: $mobile-subheader-body-font-size;
+            line-height: $mobile-subheader-body-line-height;
+            color: $primary-text-color;
+            margin-bottom: 1rem;
         }
     }
 }
