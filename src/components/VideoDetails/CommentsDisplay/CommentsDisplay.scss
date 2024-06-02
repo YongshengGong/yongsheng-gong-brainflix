@@ -1,0 +1,48 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/topography";
+
+.video-details__container-comments-display {
+    width: 100%;
+    @include flex(column, center, center);
+
+    &-comment {
+        width: 100%;
+        @include flex(row, space-between, flex-start);
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E1E1E1;
+        margin-bottom: 1rem;
+
+        &-left {
+            display: flex;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            background-color: #E1E1E1;
+        }
+
+        &-right {
+            width: 85%;
+            font-family: avenir;
+            font-size: $mobile-subheader-body-font-size;
+            line-height: $mobile-subheader-body-line-height;
+            color: $primary-text-color;
+            font-weight: 400;
+            @include flex(column, center, flex-start);
+
+            &-top {
+                width: 100%;
+                margin-bottom: 1rem;
+                @include flex(row, space-between, center);
+                &-name{
+                    font-weight:600;
+                }
+                &-time{
+                    color: $secondary-text-color;
+                }
+            }
+
+            &-bottom {}
+        }
+    }
+}

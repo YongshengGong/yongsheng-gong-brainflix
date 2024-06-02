@@ -5,7 +5,9 @@
 .video-details__container-comments-input {
     width: 100%;
     @include flex(row, space-between, flex-start);
-
+    border-bottom:1px solid #E1E1E1;
+    padding-bottom:1rem;
+    margin-bottom: 1rem;
     &-avatar {
         background-image: url("../../../assets/images/Mohan-muruge.jpg");
         width: 2.2rem;
@@ -72,8 +74,6 @@
             font-weight: 600;
             background-color: $button-default-color;
             color: #FFFFFF;
-            margin-bottom:1rem;
-
 
             &:hover {
                 background-color: $button-hover-color;
