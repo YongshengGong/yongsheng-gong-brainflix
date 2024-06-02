@@ -5,11 +5,16 @@
     padding-left:1rem;
     padding-right:1rem;
     &__title{
+        font-family: avenir;
+        font-size: $mobile-subheader-body-font-size;
+        line-height: $mobile-subheader-body-line-height;
+        color:$secondary-text-color;
+        font-weight:600;
     }
     &__display{
         &-video{
             margin-top: 1rem;
-            height:5rem;
+            height:4rem;
             @include flex(row,flex-start,center);
             &-left-image{
                height:100%;
@@ -19,8 +24,13 @@
                 @include flex(column,space-between,flex-start);
                 height:100%;
                 margin-left: 1rem;
+                font-family: avenir;
+                font-size: $mobile-subheader-body-font-size;
+                line-height: $mobile-subheader-body-line-height;
+                color: $primary-text-color;
+                font-weight: 400;
                 &-top{
-
+                    font-weight: 600;
                 }
                 &-bottom{
 
