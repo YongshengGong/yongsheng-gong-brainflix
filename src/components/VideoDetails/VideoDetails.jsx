@@ -18,6 +18,7 @@ function VideoDetails({ video }) {
                 <section className="video-details__container-comments">
                     <h3 className="video-details__container-comments-title">
                         {video.comments.length}
+                        {" "}
                         {video.comments.length === 1 ? ("Comment") : ("Comments")}
                     </h3>
                     <CommentsInput />
