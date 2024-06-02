@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './App.scss'
 import Header from "./components/Header/Header";
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import videos from "./data/video-details.json";
