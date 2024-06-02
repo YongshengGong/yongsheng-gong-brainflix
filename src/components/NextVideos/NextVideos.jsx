@@ -1,6 +1,6 @@
 import "./NextVideos.scss"
 
-function NextVideos({videos,check}) {
+function NextVideos({list,check}) {
     function handleClick(id){
        check(id);
     }
@@ -9,7 +9,7 @@ function NextVideos({videos,check}) {
             <span className="next-videos__title">NEXT VIDEOS</span>
             <section className="next-videos__display">
                 {
-                    videos.map(
+                    list.map(
                         video => {
                             return <article className="next-videos__display-video" key={video.id}>
                                       <img className="next-videos__display-video-left-image"
