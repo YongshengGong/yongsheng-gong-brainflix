@@ -9,8 +9,7 @@ function App() {
   const [list,setList]=useState(videos);
   function check(id) {
     const filter = videos.find(obj => obj.id === id);
-    const index = videos.indexOf(filter);
-    setSelectedVideo(videos[index]);
+    setSelectedVideo(filter);
   }
   const newList=list.filter(obj=>obj.id!==selectedVideo.id);
   return (
