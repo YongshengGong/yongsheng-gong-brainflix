@@ -1,0 +1,48 @@
+@use "../../../styles/partials/mixins" as *;
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/topography";
+
+.video-details__container-subSection {
+    width: 100%;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    font-family: avenir;
+    font-size: $mobile-subheader-body-font-size;
+    line-height: $mobile-subheader-body-line-height;
+    color: $primary-text-color;
+    margin-bottom:1rem;
+    border-top:1px solid #E1E1E1;
+    border-bottom:1px solid #E1E1E1;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    &-channel {
+        width: 50%;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    &-views {
+        width: 50%;
+        font-weight: 400;
+        color: $secondary-text-color;
+        background-image: url("../../../assets/images/icons/views.svg");
+        background-repeat: no-repeat;
+        text-indent: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &-time {
+        width: 50%;
+        font-weight: 400;
+        color: $secondary-text-color;
+    }
+
+    &-likes {
+        width: 50%;
+        font-weight: 400;
+        color: $secondary-text-color;
+        background-image: url("../../../assets/images/icons/likes.svg");
+        background-repeat: no-repeat;
+        text-indent: 2rem;
+    }
+}
