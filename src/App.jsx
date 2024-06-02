@@ -6,19 +6,19 @@ import videos from "./data/video-details.json";
 import NextVideos from './components/NextVideos/NextVideos';
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
-  const list=[...videos];
+  const [list,setList]=useState(videos);
   function check(id) {
     const filter = videos.find(obj => obj.id === id);
-    setSelectedVideo(filter);
-    // const newList=list.filter(obj=>obj.id!==id);
-    // setList(newList);
+    const index = videos.indexOf(filter);
+    setSelectedVideo(videos[index]);
   }
+  const newList=list.filter(obj=>obj.id!==selectedVideo.id);
   return (
     <>
       <Header />
       <main>
         <VideoDetails video={selectedVideo} />
-        <NextVideos list={list} check={check} />
+        <NextVideos list={newList} check={check} />
       </main>
     </>
   )
