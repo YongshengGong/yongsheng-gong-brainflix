@@ -1,4 +1,4 @@
-function SubSection({video}) {
+function SubSection({ video }) {
     return (
         <section className="video-details__subSection">
             <span className="video-details__subSection-channel">By {video.channel}</span>
