@@ -4,9 +4,11 @@ function CommentsDisplay({ video }) {
         <section className="video-details__container-comments-display">
             {
                 video.comments.map(
-                    comment => {
+                    (comment,index,comments) => {
                         const time=new Date(comment.timestamp).toLocaleDateString("en-us");
-                        return <article className="video-details__container-comments-display-comment">
+                        return <article className={index===comments.length-1?
+                                                  "video-details__container-comments-display-comment video-details__container-comments-display-comment--last":
+                                                  "video-details__container-comments-display-comment"}>
                                   <span className="video-details__container-comments-display-comment-left"></span>
                                   <section className="video-details__container-comments-display-comment-right">
                                     <section className="video-details__container-comments-display-comment-right-top">

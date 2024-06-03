@@ -17,7 +17,7 @@ function App() {
     <>
       <Header />
       <Player video={selectedVideo}/>
-      <main>
+      <main className="main">
         <VideoDetails video={selectedVideo} />
         <NextVideos list={newList} check={check} />
       </main>

@@ -6,6 +6,16 @@
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+    @include tablet{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @include desktop{
+        width:70%;
+        padding-right: 0;
+        padding-left: 8rem;
+        border-right:1px solid #E1E1E1;
+    }
 
     &-title {
         width: 100%;
@@ -15,15 +25,18 @@
         line-height: $mobile-page-header-line-height;
         font-weight: 700;
         color: $primary-text-color;
-
+        margin-top:1.5rem;
         @include tablet {
             font-size: $tablet-desktop-page-header-font-size;
             line-height: $tablet-desktop-page-header-line-height;
+            margin-top:2.25rem;
         }
 
         @include desktop {
             font-size: $tablet-desktop-page-header-font-size;
             line-height: $tablet-desktop-page-header-line-height;
+            padding-top:2.25rem;
+            margin-top:0;
         }
     }
 
@@ -42,6 +55,7 @@
         @include desktop {
             font-size: $tablet-desktop-subheader-body-font-size;
             line-height: $tablet-desktop-subheader-body-line-height;
+            margin-right:2rem;
         }
     }
 

@@ -36,6 +36,7 @@
             @include desktop{
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
+                padding-right:2rem;
             }
             &-top {
                 width: 100%;
@@ -47,6 +48,12 @@
                 &-time{
                     color: $secondary-text-color;
                 }
+            }
+        }
+        &--last{
+            @include desktop{
+           border-bottom:0;
+           padding-bottom:8rem;
             }
         }
     }

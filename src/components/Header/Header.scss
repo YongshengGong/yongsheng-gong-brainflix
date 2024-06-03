@@ -8,7 +8,7 @@
         @include flex(row,space-evenly,center);
     }
     @include desktop{
-        @include flex(row,space-evenly,center);
+        @include flex(row,center,center);
     }
     &__logo{
         width:7.4rem;
@@ -42,7 +42,7 @@
         margin-bottom: 0;
         @include flex(row,center,center);
         width:30%;
-        margin-left:5rem;
+        margin-left:20rem;
       }
     }
     &__search{
@@ -78,7 +78,7 @@
           }
         }
         @include desktop{
-          width:100%;
+          width:70%;
           padding:1rem;
           &::placeholder{
             font-size:$tablet-desktop-subheader-body-font-size;
@@ -134,13 +134,14 @@
             background-size: $tablet-desktop-labels-buttons-font-size;
         }
         @include desktop{
-            width:22%;
+            width:15%;
             min-width:9.375rem;
             padding-left:2.2rem;
             padding-right:2.2rem;
             font-size:$tablet-desktop-labels-buttons-font-size;
             line-height:$tablet-desktop-labels-buttons-line-height;
             background-size: $tablet-desktop-labels-buttons-font-size;
+            margin-right:2rem;
         }
     }
 }

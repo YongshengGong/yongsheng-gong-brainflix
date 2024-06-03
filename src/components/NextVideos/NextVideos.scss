@@ -2,18 +2,26 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/topography";
 .next-videos{
+    width:100%;
     padding-left:1rem;
     padding-right:1rem;
     font-family: avenir;
     font-size: $mobile-subheader-body-font-size;
     line-height: $mobile-subheader-body-line-height;
+    margin-bottom:1rem;
     @include tablet{
         font-size: $tablet-desktop-subheader-body-font-size;
-        line-height: $tablet-desktop-subheader-body-line-height;  
+        line-height: $tablet-desktop-subheader-body-line-height;
+        padding-left:1.5rem;
+        padding-right:1.5rem;  
+        margin-bottom:1.5rem;
     }
     @include desktop{
         font-size: $tablet-desktop-subheader-body-font-size;
-        line-height: $tablet-desktop-subheader-body-line-height;  
+        line-height: $tablet-desktop-subheader-body-line-height;
+        width:30%;
+        margin-right:6rem;
+        margin-bottom:0;
     }
     &__title{
         color:$secondary-text-color;

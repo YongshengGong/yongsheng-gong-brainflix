@@ -1,1 +1,11 @@
 @use "./styles/partials/resets";
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/topography";
+
+.main{
+    width:100%;
+    @include desktop{
+        @include flex(row,center,center);
+    }
+}
