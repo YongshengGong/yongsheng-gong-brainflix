@@ -4,67 +4,65 @@
 
 .video-details {
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
-    &__play {
+    &-title {
         width: 100%;
-        margin-bottom: 1.5rem;
-    }
+        margin-bottom: 1rem;
+        font-family: avenir;
+        font-size: $mobile-page-header-font-size;
+        line-height: $mobile-page-header-line-height;
+        font-weight: 700;
+        color: $primary-text-color;
 
-    &__container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-
-        &-title {
-            width: 100%;
-            margin-bottom: 1rem;
-            font-family: avenir;
-            font-size: $mobile-page-header-font-size;
-            line-height: $mobile-page-header-line-height;
-            font-weight: 700;
-            color: $primary-text-color;
-            @include tablet{
-                font-size: $tablet-desktop-page-header-font-size;
-                line-height: $tablet-desktop-page-header-line-height;
-            }
-            @include desktop{
-                font-size: $tablet-desktop-page-header-font-size;
-                line-height: $tablet-desktop-page-header-line-height;
-            }
+        @include tablet {
+            font-size: $tablet-desktop-page-header-font-size;
+            line-height: $tablet-desktop-page-header-line-height;
         }
 
-        &-description {
+        @include desktop {
+            font-size: $tablet-desktop-page-header-font-size;
+            line-height: $tablet-desktop-page-header-line-height;
+        }
+    }
+
+    &-description {
+        font-family: avenir;
+        font-size: $mobile-subheader-body-font-size;
+        line-height: $mobile-subheader-body-line-height;
+        color: $primary-text-color;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
+        }
+
+        @include desktop {
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
+        }
+    }
+
+    &-comments {
+        &-title {
             font-family: avenir;
             font-size: $mobile-subheader-body-font-size;
             line-height: $mobile-subheader-body-line-height;
             color: $primary-text-color;
+            font-weight: 700;
             margin-bottom: 1rem;
-            @include tablet{
+
+            @include tablet {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
             }
-            @include desktop{
+
+            @include desktop {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
-            }
-        }
-        &-comments{
-            &-title{
-                font-family: avenir;
-                font-size: $mobile-subheader-body-font-size;
-                line-height: $mobile-subheader-body-line-height;
-                color: $primary-text-color;
-                font-weight:700;
-                margin-bottom:1rem;
-                @include tablet{
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
-                }
-                @include desktop{
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
-                }
             }
         }
     }
-    
 }

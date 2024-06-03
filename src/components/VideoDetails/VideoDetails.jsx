@@ -5,18 +5,14 @@ import CommentsInput from "./CommentsInput/CommentsInput";
 import CommentsDisplay from "./CommentsDisplay/CommentsDisplay";
 function VideoDetails({ video }) {
     return (
-        <section className="video-details">
-            <video className="video-details__play"
-                poster={video.image} controls>
-            </video>
-            <section className="video-details__container">
-                <h1 className="video-details__container-title">{video.title}</h1>
+            <section className="video-details">
+                <h1 className="video-details-title">{video.title}</h1>
                 <SubSection video={video} />
-                <p className="video-details__container-description">
+                <p className="video-details-description">
                     {video.description}
                 </p>
-                <section className="video-details__container-comments">
-                    <h3 className="video-details__container-comments-title">
+                <section className="video-details-comments">
+                    <h3 className="video-details-comments-title">
                         {video.comments.length}
                         {" "}
                         {video.comments.length === 1 ? ("Comment") : ("Comments")}
@@ -25,7 +21,6 @@ function VideoDetails({ video }) {
                     <CommentsDisplay video={video} />
                 </section>
             </section>
-        </section>
     )
 }
 export default VideoDetails;

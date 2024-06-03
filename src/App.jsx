@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import VideoDetails from './components/VideoDetails/VideoDetails';
 import videos from "./data/video-details.json";
 import NextVideos from './components/NextVideos/NextVideos';
+import Player from './components/Player/Player';
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
   const [list,setList]=useState(videos);
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Header />
+      <Player video={selectedVideo}/>
       <main>
         <VideoDetails video={selectedVideo} />
         <NextVideos list={newList} check={check} />
