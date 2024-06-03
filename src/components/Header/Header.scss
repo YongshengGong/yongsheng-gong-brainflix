@@ -4,7 +4,13 @@
 .header{
     width:100%;
     padding:1rem;
-    &__logo-title-container{
+    @include tablet{
+        @include flex(row,space-evenly,center);
+    }
+    @include desktop{
+        @include flex(row,space-evenly,center);
+    }
+    &__logo{
         width:7.4rem;
         height:1.5rem;
         margin:0 auto;
@@ -13,11 +19,31 @@
         background-position: center;
         background-color: #FFFFFF;
         margin-bottom:1rem;
+        @include tablet{
+            margin-bottom: 0;
+            margin:0;
+          }
+          @include desktop{
+            margin-bottom: 0;
+            margin:0;
+          }
     }
     &__search-avatar-container{
         width:100%;
       @include flex(row,space-between,center);
       margin-bottom:1rem;
+      @include tablet{
+        margin-bottom: 0;
+        @include flex(row,center,center);
+        width:30%;
+        margin-left:5rem;
+      }
+      @include desktop{
+        margin-bottom: 0;
+        @include flex(row,center,center);
+        width:30%;
+        margin-left:5rem;
+      }
     }
     &__search{
         width:90%;
@@ -43,6 +69,22 @@
             font-weight: 400;
             color:$primary-text-color;
         }
+        @include tablet{
+          width:100%;
+          padding:1rem;
+          &::placeholder{
+            font-size:$tablet-desktop-subheader-body-font-size;
+            line-height:$tablet-desktop-subheader-body-line-height;
+          }
+        }
+        @include desktop{
+          width:100%;
+          padding:1rem;
+          &::placeholder{
+            font-size:$tablet-desktop-subheader-body-font-size;
+            line-height:$tablet-desktop-subheader-body-line-height;
+          }
+        }
     }
     &__avatar{
         width:2.2rem;
@@ -52,6 +94,16 @@
         background-position: -0.3rem;
         border-radius:50%;
         background-color: #E1E1E1;
+        @include tablet{
+            &-mobile{
+                display:none;
+            }
+        }
+        @include desktop{
+            &-mobile{
+                display:none;
+            }
+        }
     }
     &__upload-button{
         width:100%;
@@ -66,11 +118,29 @@
         line-height:$mobile-labels-buttons-line-height;
         font-family: avenir;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 700;
         background-color: $button-default-color;
         color:#FFFFFF;
         &:hover{
             background-color: $button-hover-color;
+        }
+        @include tablet{
+            width:22%;
+            min-width:9.375rem;
+            padding-left:2.2rem;
+            padding-right:2.2rem;
+            font-size:$tablet-desktop-labels-buttons-font-size;
+            line-height:$tablet-desktop-labels-buttons-line-height;
+            background-size: $tablet-desktop-labels-buttons-font-size;
+        }
+        @include desktop{
+            width:22%;
+            min-width:9.375rem;
+            padding-left:2.2rem;
+            padding-right:2.2rem;
+            font-size:$tablet-desktop-labels-buttons-font-size;
+            line-height:$tablet-desktop-labels-buttons-line-height;
+            background-size: $tablet-desktop-labels-buttons-font-size;
         }
     }
 }

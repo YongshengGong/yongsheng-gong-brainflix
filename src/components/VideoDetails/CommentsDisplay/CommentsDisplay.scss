@@ -22,20 +22,27 @@
         }
 
         &-right {
-            width: 85%;
+            width: 90%;
             font-family: avenir;
             font-size: $mobile-subheader-body-font-size;
             line-height: $mobile-subheader-body-line-height;
             color: $primary-text-color;
             font-weight: 400;
             @include flex(column, center, flex-start);
-
+            @include tablet{
+                font-size: $tablet-desktop-subheader-body-font-size;
+                line-height: $tablet-desktop-subheader-body-line-height;
+            }
+            @include desktop{
+                font-size: $tablet-desktop-subheader-body-font-size;
+                line-height: $tablet-desktop-subheader-body-line-height;
+            }
             &-top {
                 width: 100%;
                 margin-bottom: 1rem;
                 @include flex(row, space-between, center);
                 &-name{
-                    font-weight:600;
+                    font-weight:700;
                 }
                 &-time{
                     color: $secondary-text-color;

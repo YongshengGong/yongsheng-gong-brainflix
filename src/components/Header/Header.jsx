@@ -2,12 +2,13 @@ import "./Header.scss";
 function Header() {
     return (
         <header className="header">
-            <section className="header__logo-title-container"></section>
+            <section className="header__logo"></section>
             <section className="header__search-avatar-container">
                 <input className="header__search" placeholder="Search"></input>
-                <div className="header__avatar"></div>
+                <span className="header__avatar header__avatar-mobile"></span>
             </section>
             <button className="header__upload-button">UPLOAD</button>
+            <span className="header__avatar"></span>
         </header>
     )
 }

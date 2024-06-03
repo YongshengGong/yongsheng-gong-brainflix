@@ -22,6 +22,14 @@
             line-height: $mobile-page-header-line-height;
             font-weight: 700;
             color: $primary-text-color;
+            @include tablet{
+                font-size: $tablet-desktop-page-header-font-size;
+                line-height: $tablet-desktop-page-header-line-height;
+            }
+            @include desktop{
+                font-size: $tablet-desktop-page-header-font-size;
+                line-height: $tablet-desktop-page-header-line-height;
+            }
         }
 
         &-description {
@@ -30,6 +38,14 @@
             line-height: $mobile-subheader-body-line-height;
             color: $primary-text-color;
             margin-bottom: 1rem;
+            @include tablet{
+                font-size: $tablet-desktop-subheader-body-font-size;
+                line-height: $tablet-desktop-subheader-body-line-height;
+            }
+            @include desktop{
+                font-size: $tablet-desktop-subheader-body-font-size;
+                line-height: $tablet-desktop-subheader-body-line-height;
+            }
         }
         &-comments{
             &-title{
@@ -37,8 +53,16 @@
                 font-size: $mobile-subheader-body-font-size;
                 line-height: $mobile-subheader-body-line-height;
                 color: $primary-text-color;
-                font-weight:600;
+                font-weight:700;
                 margin-bottom:1rem;
+                @include tablet{
+                    font-size: $tablet-desktop-subheader-body-font-size;
+                    line-height: $tablet-desktop-subheader-body-line-height;
+                }
+                @include desktop{
+                    font-size: $tablet-desktop-subheader-body-font-size;
+                    line-height: $tablet-desktop-subheader-body-line-height;
+                }
             }
         }
     }
