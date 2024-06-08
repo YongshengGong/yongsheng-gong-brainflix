@@ -1,6 +1,6 @@
 import "./App.scss"
 import React, { useEffect, useState } from 'react'
-import HomePage from "./pages/HomePage"
+import HomePage from "./pages/HomePage/HomePage"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {

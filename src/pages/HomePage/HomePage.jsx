@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './HomePage.scss'
-import Header from "../components/Header/Header";
-import VideoDetails from '../components/VideoDetails/VideoDetails';
-import NextVideos from '../components/NextVideos/NextVideos';
+import Header from "../../components/Header/Header";
+import VideoDetails from '../../components/VideoDetails/VideoDetails';
+import NextVideos from '../../components/NextVideos/NextVideos';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
