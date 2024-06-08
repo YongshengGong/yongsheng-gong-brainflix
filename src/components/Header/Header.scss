@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/topography";
 .header{
-    width:100%;
+    width:100vw;
     padding:1rem;
     @include tablet{
         @include flex(row,space-evenly,center);

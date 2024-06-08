@@ -3,9 +3,11 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/topography";
 
-.main{
+#root{
     width:100%;
     @include desktop{
-        @include flex(row,center,center);
+        @include flex(row,center,flex-start);
+        flex-wrap:wrap;
+
     }
 }
