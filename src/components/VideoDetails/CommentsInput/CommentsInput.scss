@@ -2,7 +2,7 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/topography";
 
-.video-details__container-comments-input {
+.video-details__comments-input {
     width: 100%;
     @include flex(row, space-between, flex-start);
     border-bottom:1px solid #E1E1E1;

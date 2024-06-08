@@ -4,7 +4,6 @@ import Header from "../components/Header/Header";
 import VideoDetails from '../components/VideoDetails/VideoDetails';
 // import videos from "./data/video-details.json";
 import NextVideos from '../components/NextVideos/NextVideos';
-import Player from '../components/Player/Player';
 import axios from 'axios';
 function HomePage() {
   const url="https://unit-3-project-api-0a5620414506.herokuapp.com/";
@@ -58,7 +57,6 @@ function HomePage() {
   return (
     <>
       <Header />
-      <Player video={selectedVideo}/>
       <main className="main">
         <VideoDetails video={selectedVideo} />
         <NextVideos list={newList} check={check} />
