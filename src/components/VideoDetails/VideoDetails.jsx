@@ -3,6 +3,7 @@ import "./VideoDetails.scss";
 import SubSection from "./SubSection/SubSection";
 import CommentsInput from "./CommentsInput/CommentsInput";
 import CommentsDisplay from "./CommentsDisplay/CommentsDisplay";
+
 function VideoDetails({ video }) {
     return (
         <section className="video-detail">
