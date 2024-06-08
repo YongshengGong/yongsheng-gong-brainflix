@@ -17,7 +17,7 @@
         border-right:1px solid #E1E1E1;
     }
 
-    &-title {
+    &__title {
         width: 100%;
         margin-bottom: 1rem;
         font-family: avenir;
@@ -40,7 +40,7 @@
         }
     }
 
-    &-description {
+    &__description {
         font-family: avenir;
         font-size: $mobile-subheader-body-font-size;
         line-height: $mobile-subheader-body-line-height;
@@ -59,7 +59,7 @@
         }
     }
 
-    &-comments {
+    &__comments {
         &-title {
             font-family: avenir;
             font-size: $mobile-subheader-body-font-size;
