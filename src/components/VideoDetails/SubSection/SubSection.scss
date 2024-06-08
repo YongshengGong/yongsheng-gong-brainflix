@@ -2,103 +2,119 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/topography";
 
-.video-details__container-subSection {
-    // padding-left: 1.5rem;
-    // padding-right: 1.5rem;
-    width: 100%;
-    @include flex(row, flex-start, center);
-    font-family: avenir;
-    font-size: $mobile-subheader-body-font-size;
-    line-height: $mobile-subheader-body-line-height;
-    color: $primary-text-color;
-    margin-bottom: 1rem;
-    border-top: 1px solid #E1E1E1;
-    border-bottom: 1px solid #E1E1E1;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    @include tablet{
-        padding-top: 0;
-        border-top: 0;
-        padding-bottom: 0.5rem;
-        font-size: $tablet-desktop-subheader-body-font-size;
-        line-height: $tablet-desktop-subheader-body-line-height;
-    }
-    @include desktop{
-        padding-top: 0;
-        border-top: 0;
-        padding-bottom: 0.5rem;
-        font-size: $tablet-desktop-subheader-body-font-size;
-        line-height: $tablet-desktop-subheader-body-line-height;
-    }
+.video-details__subSection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    &-container {
+        width: 100%;
+        @include flex(row, flex-start, center);
+        font-family: avenir;
+        font-size: $mobile-subheader-body-font-size;
+        line-height: $mobile-subheader-body-line-height;
+        color: $primary-text-color;
+        margin-bottom: 1rem;
+        border-top: 1px solid #E1E1E1;
+        border-bottom: 1px solid #E1E1E1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
 
-    &-container1 {
-        @include flex(column,center,flex-start);
-        width:50%;
-        &-channel {
-            font-weight: 700;
-            margin-bottom: 1rem;
+        @include tablet {
+            padding-top: 0;
+            border-top: 0;
+            padding-bottom: 0.5rem;
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
         }
 
-        &-time {
-            font-weight: 400;
-            color: $secondary-text-color;
+        @include desktop {
+            padding-top: 0;
+            border-top: 0;
+            padding-bottom: 0.5rem;
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
         }
-        @include tablet{
-            @include flex(row,flex-start,center);
+
+        &-container1 {
+            @include flex(column, center, flex-start);
+            width: 50%;
+
             &-channel {
-                margin-bottom:0;
-                margin-right:2rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+
+            &-time {
+                font-weight: 400;
+                color: $secondary-text-color;
+            }
+
+            @include tablet {
+                @include flex(row, flex-start, center);
+
+                &-channel {
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                }
+            }
+
+            @include desktop {
+                @include flex(row, flex-start, center);
+
+                &-channel {
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                }
             }
         }
-        @include desktop{
-            @include flex(row,flex-start,center);
-            &-channel {
-                margin-bottom:0;
-                margin-right:2rem;
-            }
-        }
-    }
 
-    &-container2 {
-        @include flex(column,center,flex-start);
-        width:50%;
-        &-views {
-            font-weight: 400;
-            color: $secondary-text-color;
-            background-image: url("../../../assets/images/icons/views.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            text-indent: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        &-container2 {
+            @include flex(column, center, flex-start);
+            width: 50%;
 
-        &-likes {
-            font-weight: 400;
-            color: $secondary-text-color;
-            background-image: url("../../../assets/images/icons/likes.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            text-indent: 2rem;
-        }
-        @include tablet{
-            @include flex(row,flex-end,center);
             &-views {
-                margin-bottom:0;
-                margin-right:2rem;
+                font-weight: 400;
+                color: $secondary-text-color;
+                background-image: url("../../../assets/images/icons/views.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                text-indent: 2.5rem;
+                margin-bottom: 1rem;
             }
-            &-likes{
+
+            &-likes {
+                font-weight: 400;
+                color: $secondary-text-color;
+                background-image: url("../../../assets/images/icons/likes.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
                 text-indent: 2rem;
             }
-        }
-        @include desktop{
-            @include flex(row,flex-end,center);
-            &-views {
-                margin-bottom:0;
-                margin-right:2rem;
+
+            @include tablet {
+                @include flex(row, flex-end, center);
+
+                &-views {
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                }
+
+                &-likes {
+                    text-indent: 2rem;
+                }
             }
-            &-likes{
-                text-indent: 2rem;
-                margin-right:2rem;
+
+            @include desktop {
+                @include flex(row, flex-end, center);
+
+                &-views {
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                }
+
+                &-likes {
+                    text-indent: 2rem;
+                    margin-right: 2rem;
+                }
             }
         }
     }
