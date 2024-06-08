@@ -5,6 +5,7 @@ import VideoDetails from '../components/VideoDetails/VideoDetails';
 // import videos from "./data/video-details.json";
 import NextVideos from '../components/NextVideos/NextVideos';
 import axios from 'axios';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function HomePage() {
   const url = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
   const api_key = "3e1b084f-72fa-4a65-8938-76c9f8b3a923";
@@ -55,11 +56,14 @@ function HomePage() {
   }
   else {
     return (
-      <>
+      <BrowserRouter>
         <Header />
-        <VideoDetails video={selectedVideo} />
+        <Routes>
+          <Route path="/" element={<VideoDetails video={selectedVideo} />}></Route>
+          <Route path="/videos/:id" element={<VideoDetails video={selectedVideo} />}></Route>
+        </Routes>
         <NextVideos list={newList} check={check} />
-      </>
+      </BrowserRouter>
     )
   }
 }
