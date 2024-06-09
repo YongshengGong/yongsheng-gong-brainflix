@@ -25,8 +25,10 @@
     @include desktop {
         font-size: $tablet-desktop-subheader-body-font-size;
         line-height: $tablet-desktop-subheader-body-line-height;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
+        @include flex(row, flex-start, flex-start);
+        flex-wrap: wrap;
     }
 
     &__title {
@@ -64,6 +66,8 @@
 
         @include desktop {
             margin-bottom: 1.5rem;
+            width: 20rem;
+            margin-right:1.5rem;
         }
 
         &-title {
@@ -75,7 +79,6 @@
             width: 100%;
             border-radius: 4px;
             background-color: #E1E1E1;
-
             @include tablet {
                 width: 50%;
             }
@@ -85,6 +88,9 @@
     &__form {
         width: 100%;
         @include flex(column, center, flex-start);
+        @include desktop{
+            width:calc(100vw - 33.5rem);
+        }
 
         &-label1 {
             width: 100%;
@@ -126,7 +132,7 @@
                 }
 
                 @include desktop {
-                    width: 70%;
+                    width: 100%;
                     padding: 1rem;
 
                     &::placeholder {
@@ -189,7 +195,7 @@
                 }
 
                 @include desktop {
-                    width: 70%;
+                    width: 100%;
                     padding: 1rem;
 
                     &::placeholder {
@@ -211,6 +217,11 @@
               @include flex(row-reverse,flex-start,center);
               border-top: 1px solid #E1E1E1;
               padding-top:1.5rem;
+              position:absolute;
+              left:0;
+              top:27rem;
+              width:calc(100% - 12rem);
+              margin-left:6rem;
             }
             &-publish {
                 width: 100%;
@@ -254,7 +265,6 @@
                     font-size: $tablet-desktop-labels-buttons-font-size;
                     line-height: $tablet-desktop-labels-buttons-line-height;
                     background-size: $tablet-desktop-labels-buttons-font-size;
-                    margin-right: 2rem;
                     margin-bottom: 1.5rem;
                 }
             }
