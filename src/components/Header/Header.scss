@@ -6,9 +6,11 @@
     padding:1rem;
     @include tablet{
         @include flex(row,space-evenly,center);
+        padding:1.5rem;
     }
     @include desktop{
         @include flex(row,center,center);
+          padding:1.5rem;
     }
     &__logo{
         width:7.4rem;
