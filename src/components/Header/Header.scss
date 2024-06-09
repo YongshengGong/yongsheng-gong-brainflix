@@ -5,12 +5,14 @@
     width:100vw;
     padding:1rem;
     @include tablet{
-        @include flex(row,space-evenly,center);
+        @include flex(row,flex-end,center);
         padding:1.5rem;
     }
     @include desktop{
-        @include flex(row,center,center);
-          padding:1.5rem;
+        @include flex(row,flex-end,center);
+        padding:1.5rem;
+        padding-left:6rem;
+        padding-right:6rem;
     }
     &__logo{
         width:7.4rem;
@@ -24,10 +26,14 @@
         @include tablet{
             margin-bottom: 0;
             margin:0;
+            position: absolute;
+            left:1.5rem;
           }
           @include desktop{
             margin-bottom: 0;
             margin:0;
+            position: absolute;
+            left:6rem;
           }
     }
     &__search-avatar-container{
@@ -44,7 +50,7 @@
         margin-bottom: 0;
         @include flex(row,center,center);
         width:30%;
-        margin-left:20rem;
+        margin-left:30rem;
       }
     }
     &__search{
@@ -74,6 +80,7 @@
         @include tablet{
           width:100%;
           padding:1rem;
+          margin-right:4rem;
           &::placeholder{
             font-size:$tablet-desktop-subheader-body-font-size;
             line-height:$tablet-desktop-subheader-body-line-height;
@@ -134,6 +141,7 @@
             font-size:$tablet-desktop-labels-buttons-font-size;
             line-height:$tablet-desktop-labels-buttons-line-height;
             background-size: $tablet-desktop-labels-buttons-font-size;
+            margin-right:1.5rem;
         }
         @include desktop{
             width:15%;
