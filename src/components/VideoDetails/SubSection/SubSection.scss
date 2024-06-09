@@ -5,6 +5,9 @@
 .video-details__subSection {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    @include desktop{
+        padding-right:0;
+    }
     &-container {
         width: 100%;
         @include flex(row, flex-start, center);
