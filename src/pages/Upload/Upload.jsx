@@ -2,27 +2,31 @@ import "./Upload.scss"
 import Header from "../../components/Header/Header";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 function Upload() {
     const nav = useNavigate();
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [errors, setErrors] = useState({ title: false, description: false });
+
     function handlePublish(e) {
         e.preventDefault();
-        if (!e.target.title.value) {
-            e.target.title.style.borderColor = "#D22D2D";
-            e.target.description.style.borderColor = "#E1E1E1";
+        let newErrors = { title: false, description: false };
+        if (!title) {
+            newErrors.title = true;
         }
-        else if (!e.target.description.value) {
-            e.target.title.style.borderColor = "#E1E1E1";
-            e.target.description.style.borderColor = "#D22D2D";
+        if (!description) {
+            newErrors.description = true;
         }
-        else {
-            e.target.description.style.borderColor = "#E1E1E1";
-            e.target.title.style.borderColor = "#E1E1E1";
+        setErrors(newErrors);
+        if (!newErrors.title && !newErrors.description) {
             const user = confirm(`The video has been uploaded successfully✅\nClick "OK" to go back to homepage.`);
             if (user === true) {
                 nav("/");
             }
         }
     }
+
     return (
         <>
             <Header></Header>
@@ -35,11 +39,25 @@ function Upload() {
                 <form className="upload__form" onSubmit={e => handlePublish(e)}>
                     <label className="upload__form-label1">
                         <span>TITLE YOUR VIDEO</span>
-                        <input type="text" placeholder="Add a title to your video" name="title" />
+                        <input type="text"
+                            placeholder="Add a title to your video"
+                            name="title"
+                            onChange={(e) => setTitle(e.target.value)}
+                            className={errors.title ?
+                                'upload__form-label1-input upload__form-label1-input--error' :
+                                'upload__form-label1-input'}
+                        />
                     </label>
                     <label className="upload__form-label2">
                         <span>ADD A VIDEO DESCRIPTION</span>
-                        <textarea type="text" placeholder="Add a description to your video" name="description" />
+                        <textarea type="text"
+                            placeholder="Add a description to your video"
+                            name="description"
+                            onChange={(e) => setDescription(e.target.value)}
+                            className={errors.description ?
+                                'upload__form-label2-textArea upload__form-label2-textArea--error' :
+                                'upload__form-label2-textArea'}
+                        />
                     </label>
                     <section className="upload__form-button">
                         <button type="submit" className="upload__form-button-publish">PUBLISH</button>
