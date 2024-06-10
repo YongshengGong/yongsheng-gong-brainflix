@@ -43,6 +43,7 @@ function Upload() {
                             placeholder="Add a title to your video"
                             name="title"
                             onChange={(e) => setTitle(e.target.value)}
+                            value={title}
                             className={errors.title ?
                                 'upload__form-label1-input upload__form-label1-input--error' :
                                 'upload__form-label1-input'}
@@ -54,6 +55,7 @@ function Upload() {
                             placeholder="Add a description to your video"
                             name="description"
                             onChange={(e) => setDescription(e.target.value)}
+                            value={description}
                             className={errors.description ?
                                 'upload__form-label2-textArea upload__form-label2-textArea--error' :
                                 'upload__form-label2-textArea'}
@@ -61,7 +63,9 @@ function Upload() {
                     </label>
                     <section className="upload__form-button">
                         <button type="submit" className="upload__form-button-publish">PUBLISH</button>
-                        <button className="upload__form-button-cancel">CANCEL</button>
+                        <button type="button" className="upload__form-button-cancel"
+                            onClick={() => { setDescription(""); setTitle(""); setErrors({ title: false, description: false }) }}
+                        >CANCEL</button>
                     </section>
                 </form>
             </main>
