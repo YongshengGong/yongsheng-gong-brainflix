@@ -11,7 +11,7 @@ function NextVideos({ filteredList }) {
                         video => {
                             return <article className="next-videos__display-video" key={video.id}>
                                 <Link to={`/videos/${video.id}`} className="next-videos__display-video-left-image">
-                                    <img src={video.image} alt={video.description} />
+                                    <img src={video.image} alt={video.title} />
                                 </Link>
                                 <section className="next-videos__display-video-right">
                                     <span className="next-videos__display-video-right-top">{video.title}</span>

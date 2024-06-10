@@ -30,7 +30,7 @@ function Upload() {
                 <span className="upload__title">Upload Video</span>
                 <section className="upload__thumbnail">
                     <span className="upload__thumbnail-title">VIDEO THUMBNAIL</span>
-                    <img src={uploadImage} alt="" className="upload__thumbnail-content" />
+                    <img src={uploadImage} alt="An athlete getting ready to sprint" className="upload__thumbnail-content" />
                 </section>
                 <form className="upload__form" onSubmit={e => handlePublish(e)}>
                     <label className="upload__form-label1">
