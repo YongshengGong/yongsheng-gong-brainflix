@@ -2,12 +2,13 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/topography";
 
-.video-details__comments-input {
+.video-details__text-comments-input {
     width: 100%;
     @include flex(row, space-between, flex-start);
-    border-bottom:1px solid #E1E1E1;
-    padding-bottom:1rem;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
+
     &-avatar {
         background-image: url("../../../assets/images/Mohan-muruge.jpg");
         width: 2.2rem;
@@ -16,95 +17,109 @@
         background-position: -0.3rem;
         border-radius: 50%;
         background-color: #E1E1E1;
-        position:relative;
-        top:1.5rem;
-        @include tablet{
-            top:1.3rem;
+        position: relative;
+        top: 1.5rem;
+
+        @include tablet {
+            top: 1.3rem;
         }
-        @include desktop{
-            top:1.3rem;
+
+        @include desktop {
+            top: 1.3rem;
         }
     }
 
     &-form {
         @include flex(column, center, flex-start);
         width: 90%;
-        @include tablet{
+
+        @include tablet {
             @include flex(row, center, center);
-        }
-        @include desktop{
-            @include flex(row, center, center);
-        }
-      &-container{ 
-        width:100%;
-        &-title{
-            font-family: avenir;
-            font-size: $mobile-section-header-font-size;
-            line-height: $mobile-section-header-line-height;
-            color: $secondary-text-color;
-            font-weight:700;
-            margin-bottom:4px;
-            @include tablet{
-                font-size: $tablet-desktop-section-header-font-size;
-                line-height: $tablet-desktop-section-header-line-height;
-            }
-            @include desktop{
-                font-size: $tablet-desktop-section-header-font-size;
-                line-height: $tablet-desktop-section-header-line-height;
-            }
         }
 
-        &-field {
+        @include desktop {
+            @include flex(row, center, center);
+        }
+
+        &-container {
             width: 100%;
-            min-width: 15rem;
-            height: 6rem;
-            border-radius: 4px;
-            padding: 0.75rem;
-            border: $form-default-filled-border solid $form-default-filled-color;
-            background-color: $form-background-color;
-            margin-bottom:1rem;
 
-            &:focus {
-                outline: none;
-                border: $form-active-border solid $form-active-color;
-            }
-
-            &::placeholder {
-                font-size: $mobile-subheader-body-font-size;
-                line-height: $mobile-subheader-body-line-height;
+            &-title {
                 font-family: avenir;
-                font-style: normal;
-                font-weight: 400;
-                color: $primary-text-color;
-                @include tablet{
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
+                font-size: $mobile-section-header-font-size;
+                line-height: $mobile-section-header-line-height;
+                color: $secondary-text-color;
+                font-weight: 700;
+                margin-bottom: 4px;
+
+                @include tablet {
+                    font-size: $tablet-desktop-section-header-font-size;
+                    line-height: $tablet-desktop-section-header-line-height;
                 }
-                @include desktop{
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
-                }
-            }
-            @include tablet{
-                height:2.5rem;
-                margin-bottom:0;
-                padding:1rem;
-                &::placeholder{
-                    position: relative;
-                    bottom:0.5rem;
+
+                @include desktop {
+                    font-size: $tablet-desktop-section-header-font-size;
+                    line-height: $tablet-desktop-section-header-line-height;
                 }
             }
-            @include desktop{
-                height:2.5rem;
-                margin-bottom:0;
-                padding:1rem;
-                &::placeholder{
-                    position: relative;
-                    bottom:0.5rem;
+
+            &-field {
+                width: 100%;
+                min-width: 15rem;
+                height: 6rem;
+                border-radius: 4px;
+                padding: 0.75rem;
+                border: $form-default-filled-border solid $form-default-filled-color;
+                background-color: $form-background-color;
+                margin-bottom: 1rem;
+
+                &:focus {
+                    outline: none;
+                    border: $form-active-border solid $form-active-color;
+                }
+
+                &::placeholder {
+                    font-size: $mobile-subheader-body-font-size;
+                    line-height: $mobile-subheader-body-line-height;
+                    font-family: avenir;
+                    font-style: normal;
+                    font-weight: 400;
+                    color: $primary-text-color;
+
+                    @include tablet {
+                        font-size: $tablet-desktop-subheader-body-font-size;
+                        line-height: $tablet-desktop-subheader-body-line-height;
+                    }
+
+                    @include desktop {
+                        font-size: $tablet-desktop-subheader-body-font-size;
+                        line-height: $tablet-desktop-subheader-body-line-height;
+                    }
+                }
+
+                @include tablet {
+                    height: 2.5rem;
+                    margin-bottom: 0;
+                    padding: 1rem;
+
+                    &::placeholder {
+                        position: relative;
+                        bottom: 0.5rem;
+                    }
+                }
+
+                @include desktop {
+                    height: 2.5rem;
+                    margin-bottom: 0;
+                    padding: 1rem;
+
+                    &::placeholder {
+                        position: relative;
+                        bottom: 0.5rem;
+                    }
                 }
             }
         }
-    }
 
         &-button {
             width: 100%;
@@ -126,30 +141,32 @@
             &:hover {
                 background-color: $button-hover-color;
             }
-            @include tablet{
-                width:33%;
-                margin-left:1.5rem;
+
+            @include tablet {
+                width: 33%;
+                margin-left: 1.5rem;
                 position: relative;
-                top:0.5rem;
-                padding-left:2.2rem;
-                padding-right:2.2rem;
-                min-width:9.375rem;
+                top: 0.5rem;
+                padding-left: 2.2rem;
+                padding-right: 2.2rem;
+                min-width: 9.375rem;
                 font-size: $tablet-desktop-labels-buttons-font-size;
                 line-height: $tablet-desktop-labels-buttons-line-height;
                 background-size: $tablet-desktop-labels-buttons-font-size;
             }
-            @include desktop{
-                width:33%;
-                margin-left:1.5rem;
+
+            @include desktop {
+                width: 33%;
+                margin-left: 1.5rem;
                 position: relative;
-                top:0.5rem;
-                padding-left:2.2rem;
-                padding-right:2.2rem;
-                min-width:9.375rem;
+                top: 0.5rem;
+                padding-left: 2.2rem;
+                padding-right: 2.2rem;
+                min-width: 9.375rem;
                 font-size: $tablet-desktop-labels-buttons-font-size;
                 line-height: $tablet-desktop-labels-buttons-line-height;
                 background-size: $tablet-desktop-labels-buttons-font-size;
-                margin-right:2rem;
+                margin-right: 2rem;
             }
         }
     }

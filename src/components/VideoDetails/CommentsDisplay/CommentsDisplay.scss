@@ -2,7 +2,7 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/topography";
 
-.video-details__comments-display {
+.video-details__text-comments-display {
     width: 100%;
     @include flex(column, center, center);
 
@@ -29,31 +29,37 @@
             color: $primary-text-color;
             font-weight: 400;
             @include flex(column, center, flex-start);
-            @include tablet{
+
+            @include tablet {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
             }
-            @include desktop{
+
+            @include desktop {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
-                padding-right:2rem;
+                padding-right: 2rem;
             }
+
             &-top {
                 width: 100%;
                 margin-bottom: 1rem;
                 @include flex(row, space-between, center);
-                &-name{
-                    font-weight:700;
+
+                &-name {
+                    font-weight: 700;
                 }
-                &-time{
+
+                &-time {
                     color: $secondary-text-color;
                 }
             }
         }
-        &--last{
-            @include desktop{
-           border-bottom:0;
-           padding-bottom:8rem;
+
+        &--last {
+            @include desktop {
+                border-bottom: 0;
+                padding-bottom: 8rem;
             }
         }
     }

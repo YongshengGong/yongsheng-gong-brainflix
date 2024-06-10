@@ -30,13 +30,11 @@ function HomePage() {
           setSelectedVideo(completeList[0]);
         }
         setList([...completeList]);
-        console.log(selectedVideo)
       }
       catch (error) {
         console.log(error);
       }
       setLoading(false);
-      console.log(list)
     }
     callApi();
   }, [id]);
@@ -70,8 +68,10 @@ function HomePage() {
     return (
       <>
         <Header />
-        <VideoDetails video={selectedVideo} />
-        <NextVideos filteredList={filteredList} />
+        <main>
+          <VideoDetails video={selectedVideo} />
+          <NextVideos filteredList={filteredList} />
+        </main>
       </>
     )
   }
