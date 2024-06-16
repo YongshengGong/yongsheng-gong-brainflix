@@ -22,8 +22,8 @@
     @include desktop {
         font-size: $tablet-desktop-subheader-body-font-size;
         line-height: $tablet-desktop-subheader-body-line-height;
-        width: 30vw;
-        padding-left: 2rem;
+        width: 35vw;
+        padding-left: 1.5rem;
         padding-right: 6rem;
         border-left: 1px solid #E1E1E1;
         margin-top: 2.25rem;
@@ -39,20 +39,24 @@
 
         &-video {
             margin-top: 1rem;
-            height: 4rem;
+            height: 5rem;
             width: 100%;
             @include flex(row, flex-start, center);
+            @include tablet{
+                margin-top:1.5rem;
+            }
+            @include desktop{
+                margin-top:1.5rem;
+            }
 
             &-left-image {
                 height: 100%;
-                width: 10%;
-                max-width: 7.6rem;
-                min-width: 7.6rem;
+                width: 15%;
+                max-width: 9rem;
+                min-width: 9rem;
 
                 @include desktop {
                     width: 40%;
-                    max-width: 8.5rem;
-                    min-width: 8.5rem;
                 }
 
                 &>img {
