@@ -19,7 +19,6 @@ function HomePage() {
       try {
         const completeList = [];
         const incompleteList = await axios.get(`${url}videos?api_key=${api_key}`);
-        console.log(incompleteList);
         for (const incompleteListObject of incompleteList.data) {
           const completeListObject = await callApiCompleteList(incompleteListObject);
           completeList.push(completeListObject.data);
@@ -71,7 +70,7 @@ function HomePage() {
         <Header />
         <main>
           <VideoDetails video={selectedVideo} api_key={api_key} />
-          <NextVideos filteredList={filteredList} api_key={api_key}/>
+          <NextVideos filteredList={filteredList} api_key={api_key} />
         </main>
       </>
     )

@@ -3,7 +3,11 @@ import Header from "../../components/Header/Header";
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
+import axios from "axios";
 function Upload() {
+    const url = "http://localhost:8080/";
+    const api_key = "3e1b084f-72fa-4a65-8938-76c9f8b3a923";
     const nav = useNavigate();
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
@@ -20,6 +24,29 @@ function Upload() {
         }
         setErrors(newErrors);
         if (!newErrors.title && !newErrors.description) {
+            const newVideo = {
+                id: uuidv4(),
+                title: title,
+                channel: "Mohan Muruge",
+                image: "images/upload.jpg",
+                description: description,
+                views: "0",
+                likes: "0",
+                duration: "1:00",
+                video: "https://unit-3-project-api-0a5620414506.herokuapp.com/stream",
+                timestamp: new Date().toLocaleDateString(),
+                comments: []
+            }
+            async function post() {
+                try {
+                    const res = await axios.post(`${url}videos?api_key=${api_key}`, newVideo);
+                    console.log(res.data);
+                }
+                catch (error) {
+                    console.log("error caught in the catch block:", error);
+                }
+            }
+            post();
             const user = confirm(`The video has been uploaded successfully✅\nClick "OK" to go back to homepage.`);
             if (user === true) {
                 nav("/");
