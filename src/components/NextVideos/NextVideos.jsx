@@ -1,6 +1,6 @@
 import "./NextVideos.scss"
 import { Link } from "react-router-dom";
-function NextVideos({ filteredList }) {
+function NextVideos({ filteredList,api_key }) {
 
     return (
         <section className="next-videos">
@@ -11,7 +11,7 @@ function NextVideos({ filteredList }) {
                         video => {
                             return <article className="next-videos__display-video" key={video.id}>
                                 <Link to={`/videos/${video.id}`} className="next-videos__display-video-left-image">
-                                    <img src={video.image} alt={video.title} />
+                                    <img src={`http://localhost:8080/${video.image}?api_key=${api_key}`} alt={video.title} />
                                 </Link>
                                 <section className="next-videos__display-video-right">
                                     <span className="next-videos__display-video-right-top">{video.title}</span>

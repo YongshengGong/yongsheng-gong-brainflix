@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
 function HomePage() {
-  const url = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
+  const url = "http://localhost:8080/";
   const api_key = "3e1b084f-72fa-4a65-8938-76c9f8b3a923";
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [list, setList] = useState([]);
@@ -19,6 +19,7 @@ function HomePage() {
       try {
         const completeList = [];
         const incompleteList = await axios.get(`${url}videos?api_key=${api_key}`);
+        console.log(incompleteList);
         for (const incompleteListObject of incompleteList.data) {
           const completeListObject = await callApiCompleteList(incompleteListObject);
           completeList.push(completeListObject.data);
@@ -69,8 +70,8 @@ function HomePage() {
       <>
         <Header />
         <main>
-          <VideoDetails video={selectedVideo} />
-          <NextVideos filteredList={filteredList} />
+          <VideoDetails video={selectedVideo} api_key={api_key} />
+          <NextVideos filteredList={filteredList} api_key={api_key}/>
         </main>
       </>
     )

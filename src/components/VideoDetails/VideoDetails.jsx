@@ -4,11 +4,11 @@ import SubSection from "./SubSection/SubSection";
 import CommentsInput from "./CommentsInput/CommentsInput";
 import CommentsDisplay from "./CommentsDisplay/CommentsDisplay";
 
-function VideoDetails({ video }) {
+function VideoDetails({ video,api_key }) {
     return (
         <section className="video-details">
             <video className="video-details__player"
-                poster={video.image} controls>
+                poster={`http://localhost:8080/${video.image}?api_key=${api_key}`} controls>
             </video>
             <section className="video-details__text">
                 <h1 className="video-details__text-title">{video.title}</h1>
