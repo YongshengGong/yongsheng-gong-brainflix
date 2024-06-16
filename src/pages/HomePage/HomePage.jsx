@@ -3,6 +3,7 @@ import './HomePage.scss'
 import Header from "../../components/Header/Header";
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import NextVideos from '../../components/NextVideos/NextVideos';
+import Player from '../../components/Player/Player';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -69,8 +70,11 @@ function HomePage() {
       <>
         <Header />
         <main>
-          <VideoDetails video={selectedVideo} api_key={api_key} />
-          <NextVideos filteredList={filteredList} api_key={api_key} />
+          <Player video={selectedVideo} api_key={api_key} />
+          <section className='videoDetails-nextVideos-container'>
+            <VideoDetails video={selectedVideo} />
+            <NextVideos filteredList={filteredList} api_key={api_key} />
+          </section>
         </main>
       </>
     )

@@ -23,10 +23,10 @@
         font-size: $tablet-desktop-subheader-body-font-size;
         line-height: $tablet-desktop-subheader-body-line-height;
         width: 30vw;
-        padding-left: 0;
+        padding-left: 2rem;
         padding-right: 6rem;
-        margin-bottom: 0;
-        margin-top: 60vw;
+        border-left: 1px solid #E1E1E1;
+        margin-top:2.25rem;
     }
 
     &__title {

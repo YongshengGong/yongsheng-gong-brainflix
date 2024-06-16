@@ -5,8 +5,10 @@
 
 main{
     width:100%;
+}
+.videoDetails-nextVideos-container{
+    width:100%;
     @include desktop{
         @include flex(row,center,flex-start);
-        flex-wrap:wrap;
     }
 }
