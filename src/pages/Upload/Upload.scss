@@ -241,7 +241,7 @@
                 background-image: url("../../assets/images/icons/publish.svg");
                 background-repeat: no-repeat;
                 background-position: 4% center;
-                background-size: $mobile-labels-buttons-font-size;
+                background-size: 0.8rem;
                 border-radius: 4px;
                 font-size: $mobile-labels-buttons-font-size;
                 line-height: $mobile-labels-buttons-line-height;
@@ -264,8 +264,9 @@
                     padding-right: 2.2rem;
                     font-size: $tablet-desktop-labels-buttons-font-size;
                     line-height: $tablet-desktop-labels-buttons-line-height;
-                    background-size: $tablet-desktop-labels-buttons-font-size;
+                    background-size: 0.92rem;;
                     margin-bottom: 1.5rem;
+                    background-position: 8% center;
                 }
 
                 @include desktop {
@@ -275,8 +276,9 @@
                     padding-right: 2.2rem;
                     font-size: $tablet-desktop-labels-buttons-font-size;
                     line-height: $tablet-desktop-labels-buttons-line-height;
-                    background-size: $tablet-desktop-labels-buttons-font-size;
+                    background-size: 0.92rem;;
                     margin-bottom: 1.5rem;
+                    background-position: 8% center;
                 }
             }
 

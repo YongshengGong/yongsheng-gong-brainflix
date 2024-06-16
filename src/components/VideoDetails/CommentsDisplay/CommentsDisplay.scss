@@ -22,7 +22,7 @@
         }
 
         &-right {
-            width: 90%;
+            width: 91%;
             font-family: avenir;
             font-size: $mobile-subheader-body-font-size;
             line-height: $mobile-subheader-body-line-height;
@@ -33,12 +33,14 @@
             @include tablet {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
+                width: 93%;
             }
 
             @include desktop {
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
                 padding-right: 2rem;
+                width: 93%;
             }
 
             &-top {

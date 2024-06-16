@@ -31,14 +31,16 @@
 
     &-form {
         @include flex(column, center, flex-start);
-        width: 90%;
+        width: 91%;
 
         @include tablet {
             @include flex(row, center, center);
+            width: 93%;
         }
 
         @include desktop {
             @include flex(row, center, center);
+            width: 93%;
         }
 
         &-container {
@@ -128,7 +130,7 @@
             background-image: url("../../../assets/images/icons/add_comment.svg");
             background-repeat: no-repeat;
             background-position: 4% center;
-            background-size: $mobile-labels-buttons-font-size;
+            background-size: 0.8rem;
             border-radius: 4px;
             font-size: $mobile-labels-buttons-font-size;
             line-height: $mobile-labels-buttons-line-height;
@@ -143,7 +145,7 @@
             }
 
             @include tablet {
-                width: 33%;
+                width: 26%;
                 margin-left: 1.5rem;
                 position: relative;
                 top: 0.5rem;
@@ -152,7 +154,8 @@
                 min-width: 9.375rem;
                 font-size: $tablet-desktop-labels-buttons-font-size;
                 line-height: $tablet-desktop-labels-buttons-line-height;
-                background-size: $tablet-desktop-labels-buttons-font-size;
+                background-size: 0.92rem;
+                background-position: 8% center;
             }
 
             @include desktop {
@@ -165,8 +168,9 @@
                 min-width: 9.375rem;
                 font-size: $tablet-desktop-labels-buttons-font-size;
                 line-height: $tablet-desktop-labels-buttons-line-height;
-                background-size: $tablet-desktop-labels-buttons-font-size;
+                background-size: 0.92rem;
                 margin-right: 2rem;
+                background-position: 8% center;
             }
         }
     }
