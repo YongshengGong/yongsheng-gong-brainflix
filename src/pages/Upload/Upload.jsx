@@ -58,7 +58,7 @@ function Upload() {
         <>
             <Header></Header>
             <main className="upload">
-                <span className="upload__title">Upload Video</span>
+                <h1 className="upload__title">Upload Video</h1>
                 <section className="upload__thumbnail">
                     <span className="upload__thumbnail-title">VIDEO THUMBNAIL</span>
                     <img src={uploadImage} alt="An athlete getting ready to sprint" className="upload__thumbnail-content" />
