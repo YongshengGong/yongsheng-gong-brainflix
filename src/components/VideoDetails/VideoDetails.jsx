@@ -16,7 +16,7 @@ function VideoDetails({ video }) {
                 <h3 className="mainBottom__videoDetails-comments-title">
                     {video.comments.length}
                     {" "}
-                    {video.comments.length === 1 ? ("Comment") : ("Comments")}
+                    {video.comments.length <=1 ? ("Comment") : ("Comments")}
                 </h3>
                 <CommentsInput />
                 <CommentsDisplay video={video} />
