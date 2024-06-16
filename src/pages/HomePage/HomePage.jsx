@@ -71,7 +71,7 @@ function HomePage() {
         <Header />
         <main>
           <Player video={selectedVideo} api_key={api_key} />
-          <section className='videoDetails-nextVideos-container'>
+          <section className='mainBottom'>
             <VideoDetails video={selectedVideo} />
             <NextVideos filteredList={filteredList} api_key={api_key} />
           </section>

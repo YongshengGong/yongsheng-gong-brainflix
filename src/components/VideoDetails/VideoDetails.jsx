@@ -4,24 +4,22 @@ import SubSection from "./SubSection/SubSection";
 import CommentsInput from "./CommentsInput/CommentsInput";
 import CommentsDisplay from "./CommentsDisplay/CommentsDisplay";
 
-function VideoDetails({ video}) {
+function VideoDetails({ video }) {
     return (
-        <section className="video-details">
-            <section className="video-details__text">
-                <h1 className="video-details__text-title">{video.title}</h1>
-                <SubSection video={video} />
-                <p className="video-details__text-description">
-                    {video.description}
-                </p>
-                <section className="video-details__text-comments">
-                    <h3 className="video-details__text-comments-title">
-                        {video.comments.length}
-                        {" "}
-                        {video.comments.length === 1 ? ("Comment") : ("Comments")}
-                    </h3>
-                    <CommentsInput />
-                    <CommentsDisplay video={video} />
-                </section>
+        <section className="mainBottom__videoDetails">
+            <h1 className="mainBottom__videoDetails-title">{video.title}</h1>
+            <SubSection video={video} />
+            <p className="mainBottom__videoDetails-description">
+                {video.description}
+            </p>
+            <section className="mainBottom__videoDetails-comments">
+                <h3 className="mainBottom__videoDetails-comments-title">
+                    {video.comments.length}
+                    {" "}
+                    {video.comments.length === 1 ? ("Comment") : ("Comments")}
+                </h3>
+                <CommentsInput />
+                <CommentsDisplay video={video} />
             </section>
         </section>
     )

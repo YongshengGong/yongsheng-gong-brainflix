@@ -2,7 +2,7 @@
 @use "../../../styles/partials/variables" as *;
 @use "../../../styles/partials/topography";
 
-.video-details__text-comments-display {
+.mainBottom__videoDetails-comments-display {
     width: 100%;
     @include flex(column, center, center);
 

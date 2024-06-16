@@ -6,7 +6,7 @@
 main{
     width:100%;
 }
-.videoDetails-nextVideos-container{
+.mainBottom{
     width:100%;
     @include desktop{
         @include flex(row,center,flex-start);

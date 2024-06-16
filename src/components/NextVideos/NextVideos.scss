@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/topography";
 
-.next-videos {
+.mainBottom__next-videos {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -26,15 +26,15 @@
         padding-left: 2rem;
         padding-right: 6rem;
         border-left: 1px solid #E1E1E1;
-        margin-top:2.25rem;
+        margin-top: 2.25rem;
     }
 
-    &__title {
+    &-title {
         color: $secondary-text-color;
         font-weight: 700;
     }
 
-    &__display {
+    &-display {
         width: 100%;
 
         &-video {

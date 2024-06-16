@@ -2,105 +2,100 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/topography";
 
-.video-details {
-    width: 100%;
+
+.mainBottom__videoDetails {
+    width: 100vw;
 
     @include desktop {
         width: 70vw;
+        padding-left: 6rem;
     }
 
-    &__text {
+    &-title {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        font-family: avenir;
+        font-size: $mobile-page-header-font-size;
+        line-height: $mobile-page-header-line-height;
+        font-weight: 700;
+        color: $primary-text-color;
+        margin-top: 1.5rem;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-size: $tablet-desktop-page-header-font-size;
+            line-height: $tablet-desktop-page-header-line-height;
+            margin-top: 2.25rem;
+        }
+
         @include desktop {
-            padding-left: 6rem;
-            // border-right:1px solid #E1E1E1;
+            padding-left: 1.5rem;
+            // padding-right: 1.5rem;
+            font-size: $tablet-desktop-page-header-font-size;
+            line-height: $tablet-desktop-page-header-line-height;
+            padding-top: 2.25rem;
+            margin-top: 0;
+        }
+    }
+
+    &-description {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-family: avenir;
+        font-size: $mobile-subheader-body-font-size;
+        line-height: $mobile-subheader-body-line-height;
+        color: $primary-text-color;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
+        }
+
+        @include desktop {
+            padding-left: 1.5rem;
+            // padding-right: 1.5rem;
+            font-size: $tablet-desktop-subheader-body-font-size;
+            line-height: $tablet-desktop-subheader-body-line-height;
+            margin-right: 2rem;
+        }
+    }
+
+    &-comments {
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @include desktop {
+            padding-left: 1.5rem;
+            padding-right: 0;
         }
 
         &-title {
-            padding-left: 1rem;
-            padding-right: 1rem;
-            width: 100%;
-            margin-bottom: 1rem;
-            font-family: avenir;
-            font-size: $mobile-page-header-font-size;
-            line-height: $mobile-page-header-line-height;
-            font-weight: 700;
-            color: $primary-text-color;
-            margin-top: 1.5rem;
-
-            @include tablet {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-                font-size: $tablet-desktop-page-header-font-size;
-                line-height: $tablet-desktop-page-header-line-height;
-                margin-top: 2.25rem;
-            }
-
-            @include desktop {
-                padding-left: 1.5rem;
-                // padding-right: 1.5rem;
-                font-size: $tablet-desktop-page-header-font-size;
-                line-height: $tablet-desktop-page-header-line-height;
-                padding-top: 2.25rem;
-                margin-top: 0;
-            }
-        }
-
-        &-description {
-            padding-left: 1rem;
-            padding-right: 1rem;
             font-family: avenir;
             font-size: $mobile-subheader-body-font-size;
             line-height: $mobile-subheader-body-line-height;
             color: $primary-text-color;
+            font-weight: 700;
             margin-bottom: 1rem;
 
             @include tablet {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
             }
 
             @include desktop {
-                padding-left: 1.5rem;
-                // padding-right: 1.5rem;
                 font-size: $tablet-desktop-subheader-body-font-size;
                 line-height: $tablet-desktop-subheader-body-line-height;
-                margin-right: 2rem;
-            }
-        }
-
-        &-comments {
-            padding-left: 1rem;
-            padding-right: 1rem;
-
-            @include tablet {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
-            }
-
-            @include desktop {
-                padding-left: 1.5rem;
-                padding-right: 0;
-            }
-
-            &-title {
-                font-family: avenir;
-                font-size: $mobile-subheader-body-font-size;
-                line-height: $mobile-subheader-body-line-height;
-                color: $primary-text-color;
-                font-weight: 700;
-                margin-bottom: 1rem;
-
-                @include tablet {
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
-                }
-
-                @include desktop {
-                    font-size: $tablet-desktop-subheader-body-font-size;
-                    line-height: $tablet-desktop-subheader-body-line-height;
-                }
             }
         }
     }
