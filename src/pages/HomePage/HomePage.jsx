@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom';
 import dotenv from "dotenv";
 function HomePage() {
   const url = "http://localhost:8080/";
-  const api_key = process.env.api_key||"3e1b084f-72fa-4a65-8938-76c9f8b3a923";
+  const api_key = "3e1b084f-72fa-4a65-8938-76c9f8b3a923";
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
